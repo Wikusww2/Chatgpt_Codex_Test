@@ -5,6 +5,7 @@
 - Entry point: `src/server.ts`
 - Tests: `tests/`
 - Build output: `dist/`
+- Static files: `public/` (game: `index.html`, `game.js`, `styles.css`)
 
 ## Primary commands
 - Install: `npm install`
