@@ -1,10 +1,13 @@
 import express from "express";
-import { add } from "./index";
+import { add } from "./index.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (_req, res) => {
+// Serve the platformer from /public
+app.use(express.static("public"));
+
+app.get("/api", (_req, res) => {
   res.json({
     message: process.env.APP_GREETING ?? "Hello from default",
     sumExample: add(2, 3)

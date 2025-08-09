@@ -26,3 +26,21 @@ npm test
 
 ## Environment
 Copy `.env.example` to `.env` and edit as needed.
+
+## Retro Platformer
+After building and starting the server, visit `http://localhost:3000/` to play a small retro-styled platformer served from the `public/` directory.
+
+### Controls
+- **Arrow Left/Right** – move
+- **Space** – jump
+- **Enter** – pause/resume
+- **R** – restart with same seed
+- **N** – generate a new seed/level
+
+Appending `?headless=1` to the URL runs a headless smoke test that simulates the physics for 600 steps and logs the final position.
+
+### Manual QA checklist
+- Player can run and jump without clipping through tiles.
+- Enemies patrol platforms and bounce the player when stomped.
+- Different seeds (`?seed=foo`) produce distinct but beatable levels.
+- Pause/resume and restart keys respond immediately.
